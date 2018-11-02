@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Sandra Wiedemann - Marketing- und Projektberatung">
+    <meta name="description" content="Sandra Wiedemann - Business-Coaching und Projektberatung">
     <meta name="author" content="Sandra Wiedemann">
 
     <title>Sandra Wiedemann</title>
 
-	<link rel="icon" type="image/x-icon" href="img/favicon.ico">
-	
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -22,413 +22,597 @@
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-	
-	<style type="text/css">
-	.leistungen-item{
-	vertical-align: middle;
-	
-	}
-	.leistungen-item div{
-	padding:30px;
-	margin:5px;
-	color: #ffffff;
-    background-color: #c77b63;
-	text-align: center;
-	font-weight: bold;
-	min-height: 113px;
-	border-radius: 30px;
-	font-size: 14pt;
-	}
-	
-	
-	.sw_label{
-	text-transform: uppercase;
-	position:absolute;
-	margin-left:20px;
-	float:left;
-	background-color:dimgray;	
-	font-weight: 700;
-	font-size: 2.0em;
-	padding:20px;
-	}
-	
-	@media(min-width:200px) {
-	.sw_label{	
-	top:134px;
-	font-size: 0.6em;
-	}}
-	
-	@media(min-width:324px) {
-	.sw_label{	
-	top:160px;
-	font-size: 0.8em;
-	}}
-	
-	@media(min-width:400px) {
-	.sw_label{	
-	top:230px;
-	font-size: 1.0em;
-	}}
-	
-	@media(min-width:500px) {
-	.sw_label{	
-	top:260px;
-	font-size: 1.2em;
-	}}
-	
-	@media(min-width:640px) {
-	.sw_label{
-	top:338px;
-	font-size: 1.4em;
-	}}
-	
-	@media(min-width:768px) {
-	.sw_label{
-	top:372px;
-	font-size: 1.6em;
-	}}
-	
-	@media(min-width:1024px) {
-	.sw_label{
-	top:450px;
-	}}
-	
-	.modal-backdrop{
-	z-index:0;
-	}
-	
-	.label{
-	font-size:1.5em;
-	margin:10px;
-	}
-	
-	
-	</style>
-	
+
+    <style type="text/css">
+
+        #leistungen {
+            z-index: 2;
+        }
+
+        .leistungen-item {
+            vertical-align: middle;
+
+        }
+
+        .leistungen-item .leitungen-text {
+            padding: 30px;
+            margin: 5px;
+            color: #ffffff;
+            background-color: #c77b63;
+            text-align: center;
+            font-weight: bold;
+            min-height: 113px;
+            border-radius: 30px;
+            font-size: 14pt;
+        }
+
+        .leistungen-item .portfolio-link .caption {
+            position: absolute;
+            width: 95%;
+            height: 100%;
+            opacity: 0;
+            background: rgba(24, 188, 156, .9);
+            -webkit-transition: all ease .5s;
+            -moz-transition: all ease .5s;
+            transition: all ease .5s;
+            border-radius: 30px;
+        }
+
+        .leistungen-item .portfolio-link .caption:hover {
+            opacity: 1;
+        }
+
+        .leistungen-item .portfolio-link .caption .caption-content {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            height: 20px;
+            margin-top: -12px;
+            text-align: center;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .leistungen-item .portfolio-link .caption .caption-content i {
+            margin-top: -12px;
+        }
+
+        .leistungen-item .portfolio-link .caption .caption-content h3,
+        .leistungen-item .portfolio-link .caption .caption-content h4 {
+            margin: 0;
+        }
+
+        .sw_label {
+            text-transform: uppercase;
+            position: absolute;
+            margin-left: 20px;
+            float: left;
+            background-color: dimgray;
+            font-weight: 700;
+            font-size: 2.0em;
+            padding: 20px;
+        }
+
+        @media (min-width: 200px) {
+            .sw_label {
+                top: 134px;
+                font-size: 0.6em;
+            }
+        }
+
+        @media (min-width: 324px) {
+            .sw_label {
+                top: 160px;
+                font-size: 0.8em;
+            }
+        }
+
+        @media (min-width: 400px) {
+            .sw_label {
+                top: 230px;
+                font-size: 1.0em;
+            }
+        }
+
+        @media (min-width: 500px) {
+            .sw_label {
+                top: 260px;
+                font-size: 1.2em;
+            }
+        }
+
+        @media (min-width: 640px) {
+            .sw_label {
+                top: 338px;
+                font-size: 1.4em;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .sw_label {
+                top: 372px;
+                font-size: 1.6em;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .sw_label {
+                top: 450px;
+            }
+        }
+
+        .modal-backdrop {
+            z-index: 0;
+        }
+
+        .label {
+            font-size: 1.5em;
+            margin: 10px;
+        }
+
+
+    </style>
+
 </head>
 
 <body id="page-top" class="index">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#page-top">Sandra Wiedemann</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-					<!--
-                    <li class="page-scroll">
-                        <a href="#portfolio">Portfolio</a>
-                    </li>
-					-->
-					  <li class="page-scroll">
-                        <a href="#leistungen">Leistungen</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#about">&Uuml;ber mich</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contact" >Kontakt: 0177 2362031</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#page-top">Sandra Wiedemann</a>
         </div>
-        <!-- /.container-fluid -->
-    </nav>
 
-	
-	
-    <!-- Header -->
-    <header>
-	
-		<div class="container" style="padding:0px;">
-			<div class="row">
-			    	
-				<div class="col-lg-12">		
-						<img class="img-responsive" src="img/sandra_wiedemann.jpg" alt="" style="margin:0;float:right;">   
-                </div>
-			</div>
-		</div>		
-		<div class="sw_label col-lg-6">
-						<span>Marketing- und Projektberatung</span>
-						</div>  
-    </header>
-	
-	<section id="leistungen">
-	 <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>leistungen</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-			<div class="col-lg-8 col-lg-offset-2 text-center">
-	
-				<h3>Sie suchen Unterst&uuml;tzung?</h3> 
-				<h4> Als Beraterin und Projektmanagerin stehe ich Ihnen zur Seite und Sie können auf meine langj&auml;hrige Erfahrung und Professionalit&auml;t zur&uuml;ckgreifen. 
-				
-				<br/><br/>
-			Meine Schwerpunkte sind:</h4>
-			</div>
-			</div>
-			
-			 <div class="row">
-			<div class="col-sm-4 leistungen-item"><div>Kampagnenplanung und –betreuung</div> </div> 
-			<div class="col-sm-4 leistungen-item"><div>Pr&auml;sentationserstellung</div> </div> 
-			<div class="col-sm-4 leistungen-item"><div>Arbeiten im Content-Management-System</div> </div> 
-			</div>
-			
-			 <div class="row">
-			<div class="col-sm-4 leistungen-item"><div>Kommunikative Kampagnensteuerung </div></div> 
-			<div class="col-sm-4 leistungen-item"><div>Community Marketing</div></div> 
-			<div class="col-sm-4 leistungen-item"><div>Social Media Beratung</div> </div> 
-			</div>
-			
-			 <div class="row">
-			<div class="col-sm-4 leistungen-item"><div>Projektmanagement</div></div> 
-			<div class="col-sm-4 leistungen-item"><div>Produktmanagement </div> </div> 
-			<div class="col-sm-4 leistungen-item"><div>Entwicklung von Kooperationsideen</div> </div> 
-			</div>
-			
-			 <div class="row">
-			<div class="col-sm-4 leistungen-item"><div>Unterst&uuml;tzung bei der Ausarbeitung von Verkaufsunterlagen </div> </div> 
-			<div class="col-sm-4 leistungen-item"><div>Konzeptentwicklung bei Trailer-Produktionen</div> </div> 
-			<div class="col-sm-4 leistungen-item"><div>Planung und Abstimmung von Werbemittelproduktion und -einsatz</div> </div> 
-			</div>
-			
-			<!--
-			 <div class="row">
-				<div class="col-sm-12" >
-				<div class="label label-default">Unterst&uuml;tzung bei der Ausarbeitung von Verkaufsunterlagen</div> 
-				<br/>
-				<div class="label label-default">Konzeptentwicklung bei Trailer-Produktionen</div>
-				<div class="label label-default">Planung und Abstimmung von Werbemittelproduktion und -einsatz</div> 
-				</div> 
-			</div>
-			-->
-			</div>
-	 </div>
-	</section>
-	
-    <!-- Portfolio Grid Section 
-    <section id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Portfolio</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/cabin.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/cake.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/circus.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/game.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/safe.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/submarine.png" class="img-responsive" alt="">
-                    </a>
-                </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#about">Coaching</a>
+                </li>
+                <!--
+                <li class="page-scroll">
+                    <a href="#about">Blog</a>
+                </li>
+                -->
+                <li class="page-scroll">
+                    <a href="#about">Referenzen</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#leistungen">Leistungen</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#about">Profil</a>
+                </li>
+
+                <li class="page-scroll">
+                    <a href="#contact">Kontakt: 0177 2362031</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+
+<!-- Header -->
+<header>
+
+    <div class="container" style="padding:0px;">
+        <div class="row">
+
+            <div class="col-lg-12">
+                <img class="img-responsive" src="img/sandra_wiedemann.jpg" alt="" style="margin:0;float:right;">
             </div>
         </div>
-    </section>
--->
-    <!-- About Section -->
-    <section class="success" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>&Uuml;ber mich</h2>
-                    <hr class="star-light">
-                </div>
-            </div>
-            <div class="row">
-			
-			
-			
-			<!--
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
-                </div>
-				-->
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                  <p >Selbstst&auml;ndige Marketing- und Projektberaterin.</p>
+    </div>
+    <div class="sw_label col-lg-6">
+        <span>Business-Coaching und Projektberatung</span>
+    </div>
+</header>
 
-					<p >Spezialisiert auf Medien- und Entertainmentunternehmen, Verlage und Agenturen.</p>
+<section id="start">
 
-					<p >Knapp 10 Jahre Erfahrung in der Medienlandschaft (Agentur,
-					Entertainment, TV und Verlag). Zu den beruflichen Meilensteinen geh&ouml;ren
-					die Betreuung von gro&szlig;en Marketingkampagnen beim Gr&auml;fe und Unzer Verlag, die eigenverantwortliche F&uuml;hrung (Projekt-
-					und Produktmanagement sowie Vertrieb) der Produktkategorie DVD bei der
-					ProSiebenSat.1 AG und die Position als Business Analyst bei der Agentur PACT.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3>&ldquor;Entwickeln, was morgen wichtig ist!&ldquo;</h3>
 
-					<p >Professionalit&auml;t und Hands-On-Mentalit&auml;t.</p>
+                <p>
+                    Menschen auf Augenh&ouml;he zu begleiten ist meine Leidenschaft. Die Basis daf&uuml;r sind
+                    Ehrlichkeit,
+                    Wertsch&auml;tzung und Vertrauen.<br/>
 
-					<p >Ausbildung im Online Marketing mit Schwerpunkt auf Social Media.</p>
-
-					<p >Studium der Betriebswirtschaftslehre (FH) mit dem Schwerpunkt
-					Marketing Management International. L&auml;ngere Auslandsaufenthalte in den
-					Niederlanden, S&uuml;dostasien und Australien. </p>
-
-                </div>
-				
-				
-				
-				
+                    Empowerment: Wir sind noch wirkungsvoller mit gegenseitiger Unterst&uuml;tzung.
+                </p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Ihr Kontakt zu mir</h2>
-                    <hr class="star-primary" style="content:none;">
-                </div>
-            </div>
-			<div class="row">
-                <div class="col-lg-12 text-center" style="padding:40px;">
-                    <h4>Rufen Sie mich an oder senden Sie mir eine E-Mail, ich nehme mir gern Zeit f&uumlr Sie.</h4>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Bitte geben Sie Ihren Namen ein.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>E-Mail-Adresse</label>
-                                <input type="email" class="form-control" placeholder="E-Mail-Adresse" id="email" required data-validation-required-message="Bitte geben Sie Ihre E-Mail-Adresse ein.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Telefonnummer</label>
-                                <input type="tel" class="form-control" placeholder="Telefonnummer" id="phone" required data-validation-required-message="Bitte geben Sie Ihre Telefonnummer ein.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Nachricht</label>
-                                <textarea rows="5" class="form-control" placeholder="Nachricht" id="message" required data-validation-required-message="Bitte geben Sie eine Nachricht ein."></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <br>
-                        <div id="success"></div>
-                        <div class="row">
-                            <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg">Abschicken</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+<section id="leistungen">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>coaching</h2>
+                <hr class="star-primary">
             </div>
         </div>
-    </section>
+        <div class="row">
+            <div class="col-lg-12 text-center">
 
-    <!-- Footer -->
-    <footer class="text-center">
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col col-md-4">
-                        <h3>Adresse</h3>
-                        <p>Kellerstraße 36<br>81667 M&uumlnchen</p>
+                <h3>ANGEBOT IN M&Uuml;NCHEN</h3>
+
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+
+            <div class="col-sm-6 leistungen-item">
+                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
                     </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Business Networks</h3>
-                        <ul class="list-inline">
-						<!--
+                    <div class="leitungen-text">Karrierecoaching</div>
+                </a>
+            </div>
+
+            <div class="col-sm-6 leistungen-item">
+                <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <div class="leitungen-text">Change</div>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 leistungen-item">
+                <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <div class="leitungen-text">Pers&ouml;nlichkeitsentwicklung</div>
+                </a>
+            </div>
+            <div class="col-sm-6 leistungen-item">
+                <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <div class="leitungen-text">Sparring Partner</div>
+                </a>
+            </div>
+
+        </div>
+
+
+    </div>
+    </div>
+</section>
+
+<!--
+<section id="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Portfolio</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/portfolio/cabin.png" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/portfolio/cake.png" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/portfolio/circus.png" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/portfolio/game.png" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/portfolio/safe.png" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/portfolio/submarine.png" class="img-responsive" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+-->
+
+<!-- About Section -->
+<section class="success" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Profil</h2>
+                <hr class="star-light">
+            </div>
+        </div>
+        <div class="row">
+
+
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+
+                <h3>MEINE HALTUNG ALS COACH</h3>
+
+                <h4>&ldquor;St&auml;rken st&auml;rken.&ldquo;</h4>
+
+
+                <ul class="text-left" style="font-size: 20px;">
+                    <li>Der Kunde ist K&ouml;nig!</li>
+                    <li>Methodenkompetenz und Praxisn&auml;he</li>
+                    <li>L&ouml;sungs- und Ressourcenorientierung</li>
+                    <li>Ziele setzen und erreichen &ndash; Nachhaltigkeit sichern!</li>
+                    <li>Meine Konzepte und Ans&auml;tze entstehen individuell im Dialog</li>
+                </ul>
+
+                <h3>MEIN BERUFLICHER WERDEGANG</h3>
+
+                <p class="text-justify">Ich kenne die Unternehmensseite aufgrund meiner langj&auml;hrigen Erfahrung als
+                    Projektmanager &amp; Account
+                    Executive, sowohl in Agenturen, im Konzern als auch in mittelst&auml;ndischen Unternehmen. Als
+                    Selbstst&auml;ndige
+                    ist mir der Gr&uuml;ndungsprozess ebenso bekannt wie die Form des angestellt seins.
+                    Aus meinem Need aus Unternehmenszeit habe ich eine Berufung gemacht und begleite Menschen in
+                    Ver&auml;nderungsprozessen.</p>
+
+                <h4>Ausbildungen/ Erfahrungen im Detail:</h4>
+                <div>
+
+                    <ul class="text-left" style="font-size:20px;">
+
+                        <li>Zertifizierung als Systemischer Coach</li>
+                        <li>Zertifizierung als Change Managerin</li>
+                        <li>Praxiserfahrung als angestellter Karrierecoach bei der Beruflichen Fortbildungszentren der
+                            Bayerischen
+                            Wirtschaft gGmbH: Moderation von Onboarding-Veranstaltungen, Seminarleiter und 1:1
+                            Einzelcoaching-Sitzungen
+                        </li>
+                        <li>Seit &uuml;ber 10 Jahren in der Medienwelt (Siemens AG, ProSiebenSat.1 AG, Gr&auml;fe und
+                            Unzer
+                            Verlag,
+                            PACT AG)
+                            angestellt und freiberuflich t&auml;tig. U.A. Kampagnenverantwortung, F&uuml;hren eines
+                            Accounts,
+                            Beratung
+                            von
+                            namenhaften Partnern
+                        </li>
+                        <li>Abschluss Studium: Diplom Betriebswirtin (FH) &ndash; Marketing Management International
+                        </li>
+                        <li>Diverse Weiterbildungen: Office Struktur, Umgang mit psychischen Auff&auml;lligkeiten,
+                            Kommunikation
+                            etc.
+                        </li>
+                        <li>L&auml;ngere Auslandsaufenthalte in den Niederlanden, S&uuml;dostasien und Australien.</li>
+                        <li>Interesse an New Work Themen, Hubs, MeetUps, Vernetzen, Reisen &amp; Natur</li>
+                        <li>Soft Skills: Empathisch. Klar. Strukturiert. Hands-On-Mentalit&auml;t.</li>
+                        <li>Motto: &ldquor;Never stop learning.&ldquo;</li>
+                    </ul>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Referenzen</h2>
+                <hr class="star-primary" style="content:none;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center" style="padding:40px;">
+                <h3>SO SEHEN MICH KUNDEN</h3>
+
+                <blockquote><p>Man ist nicht die Person, die man im Spiegel sieht, sondern die, die im Blick des anderen
+                    erstrahlt.</p>
+                    <footer>Tarum J. Tejpal</footer>
+                </blockquote>
+
+
+                <blockquote>
+                    Frau Wiedemann f&uuml;hrt sehr professionell und strukturiert durch das Coaching. Ihre ruhige Art
+                    und ihre zielgerichteten Fragen, haben es mir erm&ouml;glicht, z&uuml;gig Ist-Zust&auml;nde zu
+                    dokumentieren um
+                    dann gezielt
+                    n&auml;chste Handlungsschritte herauszuarbeiten. Besonders positiv war, dass Sie in den
+                    Coachingsitzungen
+                    tiefer in die einzelnen Bereiche hineingeht ohne das gro&szlig;e Gesamtbild aus den Augen zu
+                    verlieren.<br/><br/>
+                    Ich werde gerne weiterhin mit ihr zusammenarbeiten. Sie ist eine wertvolle Mentorin und hat mir
+                    dabei geholfen, eine ganz individuelle Strategie f&uuml;r meine Karriere zu finden.<br/>
+                    <footer>M. En Nazer, Production Managerin, Verlagswesen</footer>
+                </blockquote>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Ihr Kontakt zu mir</h2>
+                <hr class="star-primary" style="content:none;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center" style="padding:40px;">
+                <blockquote>
+                    <h4>&ldquor;Was du suchst, ist in dir. Alle Antworten, die du suchst, sind schon in dir.&ldquo;</h4>
+                    <footer>Prem Rawat</footer>
+                </blockquote>
+
+                <p class="text-justify">Ich begleite Sie gerne l&ouml;sungsorientiert dabei diese Antworten zu finden.
+                    <br/><br/>
+                    <strong>Mein Angebot f&uuml;r Sie: kostenlose telefonische Erstberatung!</strong>
+                    <br/><br/>
+                    Rufen Sie mich gerne zu einer Terminvereinbarung an oder schreiben Sie mir eine Nachricht. In diesem
+                    kostenlosen
+                    (telefonischen) Erstgespr&auml;ch erfahren Sie mehr &uuml;ber meine Arbeitsweise, erz&auml;hlen von
+                    Ihrem Thema und
+                    wir finden
+                    heraus, ob die Chemie stimmt. Nat&uuml;rlich haben Sie hier schon die Gelegenheit Fragen zu stellen.
+                    <br/><br/>
+                    Ich freue mich auf Sie!
+                    <br/>
+                    Ihre Sandra Wiedemann
+                </p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                <form name="sentMessage" id="contactForm" novalidate>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Name</label>
+                            <input type="text" class="form-control" placeholder="Name" id="name" required
+                                   data-validation-required-message="Bitte geben Sie Ihren Namen ein.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>E-Mail-Adresse</label>
+                            <input type="email" class="form-control" placeholder="E-Mail-Adresse" id="email" required
+                                   data-validation-required-message="Bitte geben Sie Ihre E-Mail-Adresse ein.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Telefonnummer</label>
+                            <input type="tel" class="form-control" placeholder="Telefonnummer" id="phone" required
+                                   data-validation-required-message="Bitte geben Sie Ihre Telefonnummer ein.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Nachricht</label>
+                            <textarea rows="5" class="form-control" placeholder="Nachricht" id="message" required
+                                      data-validation-required-message="Bitte geben Sie eine Nachricht ein."></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+                            <button type="submit" class="btn btn-success btn-lg">Abschicken</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center">
+    <div class="footer-above">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col col-md-4">
+                    <h3>Adresse</h3>
+                    <address>
+                        <p>Kellerstra&szlig;e 36<br>81667 M&amp;uumlnchen</p>
+                    </address>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h3>Business Networks</h3>
+                    <ul class="list-inline">
+                        <!--
                             <li>
                                 <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
                             </li>
@@ -438,154 +622,244 @@
                             <li>
                                 <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
                             </li>
-							-->
+                            -->
+                        <li>
+                            <a href="http://de.linkedin.com/pub/sandra-wiedemann/88/b36/99"
+                               class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.xing.com/profile/Sandra_Wiedemann14/N1.207.322dc9"
+                               class="btn-social btn-outline"><i class="fa fa-fw fa-xing"></i></a>
+                        </li>
+                        <!--
+                        <li>
+                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                        </li>
+                        -->
+                    </ul>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h3>meine kontaktdaten</h3>
+                    <p>E-Mail: <a href="mailto:kontakt@sandrawiedemann.de">kontakt@sandrawiedemann.de</a></p>
+                    <p>Tel.: <a href="#">0177 2362031</a></p>
+                    <br/>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#impressum">
+                        Impressum
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-below" style="background-color:dimgray;">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12">
+                    Copyright &copy; sandrawiedemann.de 2014 2018
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</footer>
+
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top page-scroll visible-xs visble-sm">
+    <a class="btn btn-primary" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+</div>
+
+<!-- Portfolio Modals -->
+<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Karrierecoaching</h2>
+                        <hr class="star-primary">
+                        <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="" width="180">
+
+                        <ul class="text-left item-details">
                             <li>
-                                <a href="http://de.linkedin.com/pub/sandra-wiedemann/88/b36/99" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                                <strong>Klarheit in der pers&ouml;nlichen Positionierung </strong>
                             </li>
-							 <li>
-                                <a href="https://www.xing.com/profile/Sandra_Wiedemann14/N1.207.322dc9" class="btn-social btn-outline"><i class="fa fa-fw fa-xing"></i></a>
-                            </li>
-							<!--
                             <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                                <strong>Entwicklung einer individuellen Bewerbungsstrategie </strong>
                             </li>
-							-->
+                            <li>
+                                <strong>Optimierung Text-/ K&ouml;rpersprache </strong>
+                            </li>
+                            <li>
+                                <strong>Coaching zu pers&ouml;nlichen Kontaktsituationen mit potentiellen Kunden/
+                                    Arbeitgebern </strong>
+                            </li>
                         </ul>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>meine kontaktdaten</h3>
-                        <p>E-Mail: <a href="mailto:kontakt@sandrawiedemann.de">kontakt@sandrawiedemann.de</a></p>
-						<p>Tel.: <a href="#">0177 2362031</a></p>
-						<br/>
-						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#impressum">Impressum</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
+                            Schlie&szlig;en
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer-below" style="background-color:dimgray;">
-            <div class="container">
-                <div class="row">
-					
-                    <div class="col-md-12">
-                        Copyright &copy; sandrawiedemann.de 2014
-                    </div>
-						
-					</div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll visible-xs visble-sm">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
     </div>
+</div>
 
-    <!-- Portfolio Modals 
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Pers&ouml;nlichkeitsentwicklung</h2>
+                        <hr class="star-primary">
+                        <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="" width="180">
+
+                        <ul class="text-left item-details">
+                            <li><strong>Souver&auml;n und authentisch auftreten</strong></li>
+                            <li><strong>Konflikte l&ouml;sen</strong></li>
+                            <li><strong>Glaubenss&auml;tze ablegen</strong></li>
+                            <li><strong>Entscheidungen treffen</strong></li>
+                            <li><strong>Entwicklung von neuen Handlungsm&ouml;glichkeiten und Perspektiven</strong></li>
+                        </ul>
+
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
+                            Schlie&szlig;en
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Change</h2>
+                        <hr class="star-primary">
+                        <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="" width="180">
+
+                        <ul class="text-left item-details">
+                            <li><strong>Berufliche Neu-/ Umorientierung</strong></li>
+                            <li><strong>Perspektiven und Potenzial entdecken</strong></li>
+                            <li><strong>Begleitung von F&uuml;hrungspersonen und Mitarbeitern in
+                                Ver&auml;nderungsprozessen</strong></li>
+                            <li><strong>Agil agieren</strong></li>
+                            <li><strong>Change Design</strong></li>
+                        </ul>
+
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
+                            Schlie&szlig;en
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="impressum" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
         <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Schlie&szlig;en</span></button>
+                <h4 class="modal-title">IMPRESSUM</h4>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="modal-body">
+                <p>
+                <address>
+                    <strong>Sandra Wiedemann</strong><br/>
+                    Kellerstra&szlig;e 36<br/>
+                    81667 M&uuml;nchen<br/>
+                    Telefon: 0177 2362031<br/>
+                    E-Mail: <a href="mailto:kontakt@sandrawiedemann.de">kontakt@sandrawiedemann.de</a><br/>
+                </address>
+                </p>
+                <br/>
+                <p>
+                    USt-ID: DE296461574<br/>
+                    <br/>
+                    Bildnachweis: Portr&auml;t Sandra Wiedemann: &copy; Lia Edwards<br/>
+                    <br/>
+                    Webseitenerstellung: Matthias Wiedemann<br/>
+                    <br/>
+                    Theme: <a target="_new"
+                              href="http://startbootstrap.com/template-overviews/freelancer/">Freelancer</a>
+                <p>
+                    Haftungshinweis: Trotz sorgf&auml;ltiger inhaltlicher Kontrolle &uuml;bernehmen wir keine Haftung f&uuml;r
+                    die
+                    Inhalte externer Links. F&uuml;r den Inhalt der verlinkten Seiten sind ausschlie&szlig;lich deren
+                    Betreiber
+                    verantwortlich.
+                </p>
             </div>
-        </div>
-    </div>
-    -->
-  
-	  <div class="modal fade" id="impressum" tabindex="-1" role="dialog" aria-hidden="true">
-	  <div class="modal-dialog">
-		<div class="modal-content">
-		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-			<h4 class="modal-title">IMPRESSUM</h4>
-		  </div>
-		  <div class="modal-body">
-							<p>
-							Sandra Wiedemann<br/>
-							Kellerstraße 36<br/>
-							81667 München<br/>
-							Telefon: 0177 2362031<br/>
-							E-Mail: <a href="mailto:kontakt@sandrawiedemann.de">kontakt@sandrawiedemann.de</a><br/>
-							</p>
-							<br/>
-							 <p>
-							USt-ID:  DE296461574<br/>
-							<br/>
-							Bildnachweis: Porträt Sandra Wiedemann: &copy; Lia Edwards<br/>
-							<br/>
-							Webseitenerstellung: Matthias Wiedemann<br/>
-							<br/>
-							Theme: <a target="_new" href="http://startbootstrap.com/template-overviews/freelancer/">Freelancer</a>
-							<p>
-							Haftungshinweis: Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
-							</p>
-		  </div>
-		  <div class="modal-footer">
-			<button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
-			<!--<button type="button" class="btn btn-primary">Save changes</button>-->
-		  </div>
-		</div><!-- /.modal-content -->
-	  </div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Schlie&szlig;en</button>
+                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
+<!-- Plugin JavaScript -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/cbpAnimatedHeader.js"></script>
 
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+<!-- Contact Form JavaScript -->
+<script src="js/jqBootstrapValidation.js"></script>
+<script src="js/contact_me.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="js/freelancer.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="js/freelancer.js"></script>
 
-	<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-57661207-1', 'auto');
-  ga('send', 'pageview');
+    ga('create', 'UA-57661207-1', 'auto');
+    ga('send', 'pageview');
 
 </script>
 
